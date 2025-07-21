@@ -1,12 +1,11 @@
 <template>
     <div>
         <video
-            v-if="connected"
             ref="remoteVideo"
             autoplay
             playsinline
         />
-        <div v-else class="video-wrapper">
+        <!-- <div v-else class="video-wrapper">
             <iframe
                 width="100%"
                 height="100%"
@@ -15,7 +14,7 @@
                 frameborder="0"
                 allowfullscreen
             ></iframe>
-        </div>
+        </div> -->
     </div>
     <div style="position: fixed; bottom: 10px; right: 10px; color: white; background: rgba(0,0,0,0.5); padding: 4px 8px; border-radius: 4px; font-family: monospace;">
       Your ID: {{ myId }}
