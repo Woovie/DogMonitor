@@ -47,7 +47,16 @@ export function startSignaling(localStream, onRemoteStream, onId) {
         if (peers.has(peerId)) return
 
         const conn = new RTCPeerConnection({
-            iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+            iceServers: [
+                {
+                    urls: `stun:${location.hostname}:3478`
+                },
+                {
+                    urls: `turn:${location.hostname}:3478`,
+                    credential: 'catching0TRAITOR0dating.sniffs', // This is a non-real secret. It's just to keep anon users out.
+                    username: 're5w3wer34wetr'
+                }
+            ]
         })
 
         conn.onicecandidate = (e) => {
