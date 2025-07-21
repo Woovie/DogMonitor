@@ -13,7 +13,6 @@
                 src="https://www.youtube.com/embed/nYcHi9EgUHs?autoplay=1&mute=0&loop=1&playlist=nYcHi9EgUHs"
                 title="YouTube video player"
                 frameborder="0"
-                allow="autoplay; encrypted-media"
                 allowfullscreen
             ></iframe>
         </div>
@@ -25,7 +24,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { startSignaling } from './signaling.client'
+import { startSignaling } from './signaling.client.js'
 
 const connected = ref(false)
 const remoteVideo = ref(null)
